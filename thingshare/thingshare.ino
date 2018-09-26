@@ -1,21 +1,21 @@
 //Netwrok credentials
-const char* ssid = "Buffalo-G-38D3";  //your wifi network name
-const char* password = "n7pws65ixfb7f";  // password  
+const char* ssid = "************";  //your wifi network name
+const char* password = "*************";  // password  
 
 
 
 //Thingspeak
 //status four write api keys and channels IDs 
 
-const char * apiKey1 = "791NTJ3JD4ZXJYST"; 
-const char * apiKey2 = "833G45TQSAXXP0KI";
-const char * apiKey3 = "OYH3KX8X7B8I8P8Y";
-const char * apiKey4 = "VMF5AAOMQ7LXBVM0";
+const char * apiKey1 = "***********"; // Put your ApiKey1 here
+const char * apiKey2 = "***************"; // Put your ApiKey2 here
+const char * apiKey3 = "***************"; // Put your ApiKey3 here
+const char * apiKey4 = "************"; // Put your ApiKey4 here
 
-long channel1 = 476599;
-long channel2 = 494831;
-long channel3 = 494238;
-long channel4 = 494239;
+long channel1 = 476599; //channel1 ID
+long channel2 = 494831; //channel2 ID
+long channel3 = 494238; //channel3 ID
+long channel4 = 494239; //channel4 ID
 
 const char* server = "api.thingspeak.com";
 
