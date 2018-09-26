@@ -12,14 +12,9 @@ char auth[] = "a1e527e8523040db8adf06fde580fe13";
 
 // WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Buffalo-G-38D3";
-char pass[] = "n7pws65ixfb7f";
+char ssid[] = "***************";
+char pass[] = "******************";
 
-//char ssid[] = "KIC_LOCAL_G";
-//char pass[] = "KICKICKICKICKIC";
-
-//char ssid[] = "AndroidAPms";
-//char pass[] = "ttw-12345";
 
 #define DHTPIN 22          // What digital pin is connected to
 const int soilpin = 32;
@@ -44,10 +39,6 @@ void sendSensor()
   int soilmoisture = analogRead(soilpin);
   int lightlevel = analogRead(LIGHT_PIN);
 
-//  waterlevel = map(waterlevel, 0, 4095, 0, 1023);
-//  waterlevel = constrain(waterlevel, 0, 1023);
-//  lightlevel = map(lightlevel, 0, 4095, 0, 1023);
-//  lightlevel = constrain(lightlevel, 0, 1023);
 
   if (isnan(h) || isnan(t)) {
     Serial.println("Failed to read from DHT sensor!");
@@ -57,9 +48,9 @@ void sendSensor()
   if (isnan(t)) {
     return;
   }
-  //if (t > 25) {
-  //  Blynk.notify(String("Teperature is too high: ") + t);
-  //}
+  if (t > 25) {
+  Blynk.notify(String("Teperature is too high: ") + t);
+  }
   // send any value at any time.
   // No more that 10 values per second.
   Blynk.virtualWrite(V5, h);
@@ -77,8 +68,8 @@ void setup()
 
   Blynk.begin(auth, ssid, pass);
   // Specify server:
-  //Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 8442);
-  //Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8442);
+  Blynk.begin(auth, ssid, pass, "blynk-cloud.com", 8442);
+  Blynk.begin(auth, ssid, pass, IPAddress(192,168,1,100), 8442);
 
   dht.begin();
 
