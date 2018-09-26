@@ -1,4 +1,6 @@
-Here I will show you how to install and set up ESP32 board on Arduino IDE, and the code to use in order to get data readings of temperature, humidity, soil moisture and light intensity from Higrow sensors and to upload data on Thingspeak.com channels.
+Here I will show you how to install and set up ESP32 board on Arduino IDE, and the code to use in order to get data readings of  from Higrow sensors and to upload data on Thingspeak.com channels and using Blynk app, it's super easy.
+
+This type of sensro is wireless, it can be used to monitor and  detect pests that are thretening plants, by just getting on timely manner different environemtal parameters such as temperature, humidity, soil moisture and light intensity. 
 
 # Higrow sensor 
 Higrow is an open-source hardware integrated with ESP32 Bluetooth wifi development board supports NodeMCU / Arduino, DHt11 Temperature and Humidity sensor, Soil probe (long) detection module, CP2104 communication chip USB TO TTL, a Micro USB port, the sensor is powered by rechargeable 18650 Lithium Battery.
